@@ -52,6 +52,30 @@ namespace AT_C__Felipe.Migrations
 
                     b.ToTable("Carta");
                 });
+
+            modelBuilder.Entity("AT_C__Felipe.Models.jogador", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("gamertag")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("level")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("jogador");
+                });
 #pragma warning restore 612, 618
         }
     }

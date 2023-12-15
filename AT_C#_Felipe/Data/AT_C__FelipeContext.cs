@@ -15,5 +15,7 @@ namespace AT_C__Felipe.Data
         }
 
         public DbSet<AT_C__Felipe.Models.Carta> Carta { get; set; } = default!;
+
+        public DbSet<AT_C__Felipe.Models.jogador>? jogador { get; set; }
     }
 }
